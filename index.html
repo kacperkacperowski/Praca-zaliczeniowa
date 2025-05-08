@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Gothic&family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header-wrapper">
+      <header class="header">
+        <div class="header-top">
+          <div class="header-container nav-container">
+            <div class="logo">
+              <img
+                src="images/ITPortfolio.png"
+                alt="Logo"
+                class="logo-desktop"
+              />
+            </div>
+            <div class="hamburger-menu">
+              <div class="hamburger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <nav class="nav-desktop">
+              <ul>
+                <li class="active" data-section="home">HOME</li>
+                <li data-section="projects">PROJECTS</li>
+                <li data-section="about">ABOUT</li>
+                <li data-section="contact">CONTACT</li>
+                <li data-section="messages">MESSAGES</li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="header-bottom">
+          <div class="mobile-menu-container">
+            <div class="menu-divider top"></div>
+            <nav class="nav-mobile">
+              <ul>
+                <li class="active" data-section="home">HOME</li>
+                <li data-section="projects">PROJECTS</li>
+                <li data-section="about">ABOUT</li>
+                <li data-section="contact">CONTACT</li>
+                <li data-section="messages">MESSAGES</li>
+              </ul>
+            </nav>
+            <div class="menu-divider bottom"></div>
+          </div>
+          <div class="section-info">Generowane dynamicznie</div>
+        </div>
+      </header>
+    </div>
+    <main class="main-wrapper">
+      <div class="main-content" id="main-content"></div>
+    </main>
+    <div class="footer-wrapper">
+      <footer class="footer">
+        <div class="footer-container nav-container">
+          <nav class="footer-nav">
+            <ul>
+              <li class="active" data-section="home">HOME</li>
+              <li data-section="projects">PROJECTS</li>
+              <li data-section="about">ABOUT</li>
+              <li data-section="contact">CONTACT</li>
+              <li data-section="messages">MESSAGES</li>
+            </ul>
+          </nav>
+          <div class="footer-right-column">
+            <div class="contact-info">
+              <p>Email: example@example.com</p>
+              <p>Phone: +123 456 789</p>
+            </div>
+            <img src="images/ITPortfolio2024.png" alt="logo" />
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="modal-overlay" id="project-modal">
+      <div class="modal">
+        <button class="close-modal">&times;</button>
+        <form id="add-project-form">
+          <div class="form-group">
+            <label for="project-title">Project title</label>
+            <div class="input-container">
+              <input
+                type="text"
+                id="project-title"
+                placeholder="Project title"
+              />
+              <div class="input-underline"></div>
+            </div>
+            <div class="error-message" id="title-error"></div>
+          </div>
+          <div class="form-group">
+            <label for="project-technologies">Technologies</label>
+            <div class="input-container">
+              <input
+                type="text"
+                id="project-technologies"
+                placeholder="html,css,javascript"
+              />
+              <div class="input-underline"></div>
+            </div>
+            <div class="error-message" id="technologies-error"></div>
+          </div>
+          <button type="submit" class="modal-btn add-project-button">
+            <img src="images/add.png" alt="plus image" class="add-icon" />Add
+            project
+          </button>
+        </form>
+      </div>
+    </div>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
